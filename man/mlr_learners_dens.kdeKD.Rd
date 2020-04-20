@@ -5,7 +5,7 @@
 \alias{LearnerDensKDEkd}
 \title{Density Kerdiest Kernel Learner}
 \description{
-A \link[mlr3:LearnerDens]{mlr3::LearnerDens} implementing kdeKD from package
+A \link[mlr3proba:LearnerDens]{mlr3proba::LearnerDens} implementing kdeKD from package
 \CRANpkg{kerdiest}.
 Calls \code{\link[kerdiest:kde]{kerdiest::kde()}}.
 }
@@ -17,6 +17,15 @@ lrn("dens.kdeKD")
 }
 }
 
+\examples{
+if (requireNamespace("kerdiest")) {
+  learner = mlr3::lrn("dens.kdeKD")
+  print(learner)
+
+  # available parameters:
+  learner$param_set$ids()
+}
+}
 \seealso{
 \link[mlr3misc:Dictionary]{Dictionary} of \link[mlr3:Learner]{Learners}:
 \link[mlr3:mlr_learners]{mlr3::mlr_learners}

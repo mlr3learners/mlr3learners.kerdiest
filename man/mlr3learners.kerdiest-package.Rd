@@ -6,7 +6,8 @@
 \alias{mlr3learners.kerdiest-package}
 \title{mlr3learners.kerdiest: Learners from the {kerdiest} package for 'mlr3'}
 \description{
-Adds learners from the {kerdiest} package to 'mlr3'.
+Adds learners from the {kerdiest} package to
+    'mlr3'.
 }
 \author{
 \strong{Maintainer}: Raphael Sonabend \email{raphael.sonabend.15@ucl.ac.uk}

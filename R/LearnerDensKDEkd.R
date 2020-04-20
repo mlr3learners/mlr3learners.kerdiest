@@ -13,7 +13,6 @@
 #' @template seealso_learner
 #' @template example
 #' @export
-# <Adapt the name to your learner. For regression learners inherit = LearnerRegr>
 LearnerDensKDEkd = R6Class("LearnerDensKDEkd",
   inherit = LearnerDens,
 
@@ -51,7 +50,7 @@ LearnerDensKDEkd = R6Class("LearnerDensKDEkd",
       pdf <- function(x1) {
       }
       body(pdf) <- substitute({
-        invoke(kerdiest::kde, vec_data = data, y = x1, .args = pars)$Estimated_values
+        mlr3misc::invoke(kerdiest::kde, vec_data = data, y = x1, .args = pars)$Estimated_values
       })
 
       if (is.null(pars$type_kernel)) {

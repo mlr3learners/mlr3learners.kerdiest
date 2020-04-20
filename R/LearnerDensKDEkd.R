@@ -63,7 +63,7 @@ LearnerDensKDEkd = R6Class("LearnerDensKDEkd",
           "t" = "Triweight")
       }
 
-      Distribution$new(
+      distr6::Distribution$new(
         name = paste("kerdiest KDE", kernel),
         short_name = paste0("kerdiestKDEKern_", kernel),
         pdf = pdf)

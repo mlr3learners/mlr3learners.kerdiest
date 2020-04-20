@@ -22,7 +22,6 @@ Suggests:
     checkmate,
     distr6,
     kerdiest,
-    pracma,
     rmarkdown,
     testthat
 Remotes:

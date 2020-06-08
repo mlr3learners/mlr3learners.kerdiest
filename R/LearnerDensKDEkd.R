@@ -72,7 +72,7 @@ LearnerDensKDEkd = R6Class("LearnerDensKDEkd",
     .predict = function(task) {
       newdata = task$truth()
 
-      PredictionDens$new(task = task, pdf = self$model$pdf(newdata))
+      mlr3proba::PredictionDens$new(task = task, pdf = self$model$pdf(newdata))
 
     }
   )

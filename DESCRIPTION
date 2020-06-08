@@ -1,6 +1,6 @@
 Package: mlr3learners.kerdiest
 Title: Learners from the {kerdiest} package for 'mlr3'
-Version: 0.1.1
+Version: 0.1.1.9000
 Authors@R:
     person(given = "Raphael",
            family = "Sonabend",

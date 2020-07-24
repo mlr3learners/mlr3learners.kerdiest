@@ -47,10 +47,10 @@ LearnerDensKDEkd = R6Class("LearnerDensKDEkd",
 
       data = task$truth()
 
-      pdf <- function(x1) {
+      pdf <- function(x) {
       }
       body(pdf) <- substitute({
-        mlr3misc::invoke(kerdiest::kde, vec_data = data, y = x1, .args = pars)$Estimated_values
+        mlr3misc::invoke(kerdiest::kde, vec_data = data, y = x, .args = pars)$Estimated_values
       })
 
       if (is.null(pars$type_kernel)) {
@@ -66,7 +66,7 @@ LearnerDensKDEkd = R6Class("LearnerDensKDEkd",
       distr6::Distribution$new(
         name = paste("kerdiest KDE", kernel),
         short_name = paste0("kerdiestKDEKern_", kernel),
-        pdf = pdf)
+        pdf = pdf, type = set6::Reals$new())
     },
 
     .predict = function(task) {
